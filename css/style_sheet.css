@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+html,
+body {
+  height: 100%;
+  background-color: #000;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000 url(../img/stone.jpg) no-repeat center center;
+  background-size: cover;
+  filter: brightness(0);
+  transition: filter 2s;
+}
+
+.box {
+  border: 2px solid white;
+  padding: 30px;
+  letter-spacing: 0.75em;
+  color: white;
+  z-index: 999;
+  margin: 30px;
+  line-height: 1.5;
+  transition: all 2s;
+}
+
+.box:hover + div {
+  filter: brightness(100%);
+}
+
+.box:hover {
+  letter-spacing: 1.25em;
+  border-color: transparent;
+  padding: 12em;
+}
+
+.str {
+  transition: 1.5s 0.25s
+}
+
+.box:hover .str {
+  color: red
+}
